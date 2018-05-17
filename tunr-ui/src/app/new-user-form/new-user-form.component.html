@@ -1,0 +1,38 @@
+<form id="new-user-form" (ngSubmit)="createUser()">
+
+  <div>
+    <label for="new-user-user-name">Username </label>
+    <input
+      id="new-user-user-name"
+      type="text"
+      name="userName"
+      [(ngModel)]="user.userName" />
+  </div>
+
+  <div>
+    <label for="new-user-first-name">First Name </label>
+    <input
+      id="new-user-first-name"
+      type="text"
+      name="firstName"
+      [(ngModel)]="user.firstName" />
+  </div>
+
+  <div>
+    <label for="new-user-last-name">Last Name </label>
+    <input
+      id="new-user-last-name"
+      type="text"
+      name="lastName"
+      [(ngModel)]="user.lastName" />
+  </div>
+
+  <div>
+    <input
+      id="new-user-submit"
+      type="submit"
+      value="Create"
+      />
+  </div>
+
+</form>

@@ -1,0 +1,30 @@
+<form id="edit-user-form" (ngSubmit)="edit()">
+
+
+  <div>
+    <label for="edit-user-first-name">Edit First Name </label>
+    <input
+      id="edit-user-first-name"
+      type="text"
+      name="firstName"
+      [(ngModel)]="user.firstName" />
+  </div>
+
+  <div>
+    <label for="edit-user-last-name">Edit Last Name </label>
+    <input
+      id="edit-user-last-name"
+      type="text"
+      name="lastName"
+      [(ngModel)]="user.lastName" />
+  </div>
+
+  <div>
+    <input
+      id="edit-user-submit"
+      type="submit"
+      value="submit"
+    />
+  </div>
+
+</form>

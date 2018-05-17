@@ -1,0 +1,31 @@
+<div id="users-wrapper">
+  <h1>Users</h1>
+  <a routerLink="/new" id="new-user-link">Create User</a>
+
+  <div *ngFor="let user of users; index as i">
+    <div id={{user.id}} data-user-display>
+      <div id="user-{{user.id}}-user-name">
+        {{user.userName}}
+      </div>
+
+      <div id="user-{{user.id}}-first-name">
+        {{user.firstName}}
+      </div>
+
+      <div id="user-{{user.id}}-last-name">
+        {{user.lastName}}
+      </div>
+      <a [routerLink]="['/user', user.id]"><button
+        id="edit-user-{{user.id}}">
+        edit
+
+      </button></a>
+
+      <button
+        id="delete-user-{{user.id}}"
+        (click)="deleteUser(user.id, i)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
